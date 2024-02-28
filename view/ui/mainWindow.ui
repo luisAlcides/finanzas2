@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>main</class>
+ <widget class="QMainWindow" name="main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>875</width>
+    <height>622</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Finanzas 2</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>875</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Financiamiento</string>
+    </property>
+    <addaction name="qa_financiamiento_con_deuda"/>
+    <addaction name="btn_new_personal"/>
+    <addaction name="btn_user"/>
+   </widget>
+   <widget class="QMenu" name="menuCreditos">
+    <property name="title">
+     <string>Dividendos</string>
+    </property>
+    <addaction name="actionDesarrolladores"/>
+    <addaction name="actionCAPM"/>
+   </widget>
+   <widget class="QMenu" name="menuRendimientos">
+    <property name="title">
+     <string>Rendimientos</string>
+    </property>
+    <addaction name="actionRendimiento_por_dividendo"/>
+    <addaction name="qa_rendimiento_esperado"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuCreditos"/>
+   <addaction name="menuRendimientos"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionDesarrolladores">
+   <property name="text">
+    <string>DPS</string>
+   </property>
+  </action>
+  <action name="qa_financiamiento_con_deuda">
+   <property name="text">
+    <string>Financiamiento con Deuda</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="btnReportarTransferencias">
+   <property name="text">
+    <string>Reportar Transferencias</string>
+   </property>
+  </action>
+  <action name="btnHistorialTransferencias">
+   <property name="text">
+    <string>Historial de Transferencias</string>
+   </property>
+  </action>
+  <action name="btn_new_personal">
+   <property name="text">
+    <string>Financiamiento con acciones comunes</string>
+   </property>
+  </action>
+  <action name="btn_user">
+   <property name="text">
+    <string>Financiamiento con acciones preferenciales</string>
+   </property>
+  </action>
+  <action name="btn_personal">
+   <property name="text">
+    <string>Personal</string>
+   </property>
+  </action>
+  <action name="btn_first_fortnight">
+   <property name="text">
+    <string>Primera Quincena</string>
+   </property>
+  </action>
+  <action name="btn_segunda_quincena">
+   <property name="text">
+    <string>Segunda Quincena</string>
+   </property>
+  </action>
+  <action name="actionRendimiento_por_dividendo">
+   <property name="text">
+    <string>Rendimiento por dividendo</string>
+   </property>
+  </action>
+  <action name="actionCAPM">
+   <property name="text">
+    <string>CAPM</string>
+   </property>
+  </action>
+  <action name="qa_rendimiento_esperado">
+   <property name="text">
+    <string>Rendimiento Esperado</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

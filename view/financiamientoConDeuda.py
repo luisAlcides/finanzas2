@@ -27,4 +27,4 @@ class FinanciamientoConDeuda:
 
     def limpiar(self):
         clean_fields(self.fields)
-        self.ui.lbl_response.setText('')
+        self.ui.lbl_response.setText('0')

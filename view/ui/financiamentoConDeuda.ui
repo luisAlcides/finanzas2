@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
   <property name="windowModality">
    <enum>Qt::ApplicationModal</enum>
   </property>
@@ -9,110 +9,97 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>731</width>
-    <height>321</height>
+    <width>608</width>
+    <height>741</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Financiamento con deudas</string>
+   <string>Calculadora Financiera</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>20</y>
-     <width>241</width>
-     <height>18</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Financimiento con deudas</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_ingresos">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>100</y>
-     <width>151</width>
-     <height>18</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Ingresos por deuda</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_pagos">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>150</y>
-     <width>121</width>
-     <height>18</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Pagos por deuda</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="txt_ingresos">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>100</y>
-     <width>361</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="txt_pagos">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>140</y>
-     <width>361</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn_calcular">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>190</y>
-     <width>87</width>
-     <height>26</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Calcular</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="lbl_response">
-   <property name="geometry">
-    <rect>
-     <x>25</x>
-     <y>260</y>
-     <width>671</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn_limpiar">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>190</y>
-     <width>87</width>
-     <height>26</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Limpiar</string>
-   </property>
+  <property name="styleSheet">
+   <string notr="true">p{
+	font-size: 16px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_title">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Financiamiento con Deuda</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_explanation">
+      <property name="text">
+       <string>Costo de Deuda (kd): El costo de la deuda después de impuestos.\n i: Tasa de interés nominal de la deuda.\n Tc: Tasa impositiva corporativa.</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_interestRate">
+      <property name="placeholderText">
+       <string>Tasa de Interés Nominal (%)</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_taxRate">
+      <property name="placeholderText">
+       <string>Tasa Impositiva Corporativa (%)</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_debtPrincipal">
+      <property name="placeholderText">
+       <string>Principal de la Deuda</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_ebit">
+      <property name="placeholderText">
+       <string>Ganancias antes de Intereses e Impuestos (EBIT)</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_calcular">
+      <property name="text">
+       <string>Calcular</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_limpiar">
+      <property name="text">
+       <string>Limpiar</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_result">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

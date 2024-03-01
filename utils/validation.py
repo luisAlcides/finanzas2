@@ -24,7 +24,7 @@ def validate_number(number, lbl):
 def validate_fields(fields):
     for i in range(0, len(fields)):
         if fields[i][1] == 'number':
-            if not validate_number(fields[i][0], fields[i][2].text()):
+            if not validate_number(fields[i][0], fields[i][2]):
                 return False
     return True
 

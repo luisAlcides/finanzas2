@@ -20,7 +20,7 @@
      <x>0</x>
      <y>0</y>
      <width>875</width>
-     <height>23</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArchivo">
@@ -28,7 +28,7 @@
      <string>Financiamiento</string>
     </property>
     <addaction name="qa_financiamiento_con_deuda"/>
-    <addaction name="btn_new_personal"/>
+    <addaction name="qa_financiamiento_con_acciones_comunes"/>
     <addaction name="btn_user"/>
    </widget>
    <widget class="QMenu" name="menuCreditos">
@@ -73,7 +73,7 @@
     <string>Historial de Transferencias</string>
    </property>
   </action>
-  <action name="btn_new_personal">
+  <action name="qa_financiamiento_con_acciones_comunes">
    <property name="text">
     <string>Financiamiento con acciones comunes</string>
    </property>

@@ -30,6 +30,7 @@
     <addaction name="qa_financiamiento_con_deuda"/>
     <addaction name="qa_CAMP"/>
     <addaction name="qa_costo_acciones_preferentes"/>
+    <addaction name="qa_modelo_crecimiento_constante_dividendo"/>
    </widget>
    <widget class="QMenu" name="menuCreditos">
     <property name="title">
@@ -110,6 +111,11 @@
   <action name="qa_rendimiento_esperado">
    <property name="text">
     <string>Rendimiento Esperado</string>
+   </property>
+  </action>
+  <action name="qa_modelo_crecimiento_constante_dividendo">
+   <property name="text">
+    <string>Modelo del crecimiento constante del dividendo</string>
    </property>
   </action>
  </widget>

@@ -33,3 +33,32 @@ def clean_fields(fields):
     for i in range(0, len(fields)):
         if type(fields[i][0]) == QLineEdit:
             fields[i][0].setText('')
+
+
+def mostrar_resultado(fields, tb_resultado):
+    tb_resultado.clear()
+    style = "<style>"
+    style += "table { border-collapse: collapse; width: 100%; }"
+    style += "th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }"
+    style += "th { background-color: #f2f2f2; }"
+    style += "tr:hover { background-color: #f5f5f5; }"
+    style += ".highlighted { background-color: #BFDA7F; }"
+    style += "</style>"
+
+    table = "<table>"
+    table += "<tr><th>Variable</th><th>Nombre de la variable</th><th>Valor</th></tr>"
+    for i in range(0, len(fields)):
+        if fields[i][4]:
+            if fields[i][3]:
+                table += f"<tr><td class='highlighted'>{fields[i][1]}</td><td class='highlighted'>{fields[i][2]}</td><td class='highlighted'>{fields[i][0]:.2f}%</td></tr>"
+            else:
+                table += f"<tr><td>{fields[i][1]}</td><td>{fields[i][2]}</td><td>{fields[i][0]:.2f}%</td></tr>"
+        else:
+            if fields[i][3]:
+                table += f"<tr><td class='highlighted'>{fields[i][1]}</td><td class='highlighted'>{fields[i][2]}</td><td class='highlighted'>{fields[i][0]:.2f}</td></tr>"
+            else:
+                table += f"<tr><td>{fields[i][1]}</td><td>{fields[i][2]}</td><td>{fields[i][0]:.2f}</td></tr>"
+
+    table += "</table>"
+
+    tb_resultado.setHtml(style + table)

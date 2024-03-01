@@ -1,6 +1,6 @@
 from PyQt6 import uic
 
-from utils.validation import validate_fields
+from utils.validation import validate_fields, mostrar_resultado
 
 
 class CostoAccionesPreferentes:
@@ -25,7 +25,12 @@ class CostoAccionesPreferentes:
 
         kp = dp / np
         kp = kp * 100
-        self.ui.tb_resultado.setText(f"Kp = {kp:.2f} %")
+
+        resultado = [[kp, "Kp", "Costo de las acciones preferentes", True, False],
+                     [dp, "Dp", "Dividendos preferentes", False, False],
+                     [np, "Np", "Precio de las acciones preferentes", False, False]]
+
+        mostrar_resultado(resultado, self.ui.tb_resultado)
 
     def limpiar(self):
         self.ui.txt_dp.clear()

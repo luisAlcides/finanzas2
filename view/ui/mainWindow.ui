@@ -20,7 +20,7 @@
      <x>0</x>
      <y>0</y>
      <width>875</width>
-     <height>26</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArchivo">
@@ -28,15 +28,14 @@
      <string>Financiamiento</string>
     </property>
     <addaction name="qa_financiamiento_con_deuda"/>
-    <addaction name="qa_financiamiento_con_acciones_comunes"/>
-    <addaction name="btn_user"/>
+    <addaction name="qa_CAMP"/>
+    <addaction name="qa_costo_acciones_preferentes"/>
    </widget>
    <widget class="QMenu" name="menuCreditos">
     <property name="title">
      <string>Dividendos</string>
     </property>
     <addaction name="actionDesarrolladores"/>
-    <addaction name="actionCAPM"/>
    </widget>
    <widget class="QMenu" name="menuRendimientos">
     <property name="title">
@@ -73,14 +72,14 @@
     <string>Historial de Transferencias</string>
    </property>
   </action>
-  <action name="qa_financiamiento_con_acciones_comunes">
+  <action name="qa_CAMP">
    <property name="text">
-    <string>Financiamiento con acciones comunes</string>
+    <string>CAMP</string>
    </property>
   </action>
-  <action name="btn_user">
+  <action name="qa_costo_acciones_preferentes">
    <property name="text">
-    <string>Financiamiento con acciones preferenciales</string>
+    <string>Costo de acciones preferentes</string>
    </property>
   </action>
   <action name="btn_personal">

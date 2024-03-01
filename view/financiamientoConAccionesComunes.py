@@ -3,9 +3,9 @@ from PyQt6 import uic
 from utils.validation import validate_fields, clean_fields
 
 
-class FinanciamientoConAccionesComunes:
+class CAMP:
     def __init__(self):
-        self.ui = uic.loadUi('view/ui/financiamentoConAccionesComunes.ui')
+        self.ui = uic.loadUi('view/ui/CAMP.ui')
         self.fields = None
         self.ui.showMaximized()
         self.ui.btn_calcular.clicked.connect(self.resolver)

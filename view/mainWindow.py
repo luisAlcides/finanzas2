@@ -2,6 +2,7 @@ from PyQt6 import uic
 
 from view.costoAccionesPreferentes import CostoAccionesPreferentes
 from view.CAMP import CAMP
+from view.desviacionEstandar import DesviacionEstandar
 from view.financiamientoConDeuda import FinanciamientoConDeuda
 from view.modeloCrecimientoConstanteDividendo import ModeloCrecimientoConstanteDividendo
 from view.precioAccionHoy import PrecioAccionHoy
@@ -23,6 +24,7 @@ class MainWindow():
         self.ui.qa_rendimiento_esperado.triggered.connect(self.openRendimientoEsperado)
         self.ui.qa_rendimiento_requerido.triggered.connect(self.openRendimientoRequerido)
         self.ui.qa_rendimiento_esperado_multiple.triggered.connect(self.openRendimientoEsperadoMultiple)
+        self.ui.qa_desviacion_estandar.triggered.connect(self.openDesviacionEstandar)
 
     def openFinanciamientoConDeuda(self):
         self.financiamiento_con_deuda = FinanciamientoConDeuda()
@@ -55,3 +57,7 @@ class MainWindow():
     def openRendimientoEsperadoMultiple(self):
         self.rendimiento_esperado_multiple = RendimientoEsperadoMultiple()
         return self.rendimiento_esperado_multiple
+
+    def openDesviacionEstandar(self):
+        self.desviacion_estandar = DesviacionEstandar()
+        return self.desviacion_estandar

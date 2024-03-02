@@ -48,9 +48,16 @@
     <addaction name="qa_rendimiento_requerido"/>
     <addaction name="qa_rendimiento_esperado_multiple"/>
    </widget>
+   <widget class="QMenu" name="menuEstadistica">
+    <property name="title">
+     <string>Estadistica</string>
+    </property>
+    <addaction name="qa_desviacion_estandar"/>
+   </widget>
    <addaction name="menuArchivo"/>
    <addaction name="menuCreditos"/>
    <addaction name="menuRendimientos"/>
+   <addaction name="menuEstadistica"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionDesarrolladores">
@@ -134,6 +141,12 @@
   <action name="qa_rendimiento_esperado_multiple">
    <property name="text">
     <string>Rendimiento Esperado Multiple</string>
+   </property>
+  </action>
+  <action name="qa_desviacion_estandar">
+   <property name="text">
+    <string>Desviación estándar 
+</string>
    </property>
   </action>
  </widget>

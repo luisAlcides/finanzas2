@@ -1,5 +1,4 @@
 from PyQt6 import uic
-from PyQt6.QtWidgets import QTableWidgetItem
 
 from utils.validation import mostrar_resultado, validate_fields, mostrar_resultado_tablas
 

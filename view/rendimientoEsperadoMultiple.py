@@ -1,6 +1,7 @@
 from PyQt6 import uic
 
-from utils.validation import mostrar_resultado, validate_fields, mostrar_resultado_tablas
+from utils.util import mostrar_resultado, mostrar_resultado_tablas
+from utils.validation import validate_fields
 
 
 class RendimientoEsperadoMultiple:

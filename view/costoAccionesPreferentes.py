@@ -1,6 +1,7 @@
 from PyQt6 import uic
 
-from utils.validation import validate_fields, mostrar_resultado
+from utils.util import mostrar_resultado
+from utils.validation import validate_fields
 
 
 class CostoAccionesPreferentes:

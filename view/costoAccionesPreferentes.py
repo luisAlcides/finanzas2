@@ -26,7 +26,7 @@ class CostoAccionesPreferentes:
         kp = dp / np
         kp = kp * 100
 
-        resultado = [[kp, "Kp", "Costo de las acciones preferentes", True, False],
+        resultado = [[kp, "Kp", "Costo de las acciones preferentes", True, True],
                      [dp, "Dp", "Dividendos preferentes", False, False],
                      [np, "Np", "Precio de las acciones preferentes", False, False]]
 

@@ -62,3 +62,25 @@ def mostrar_resultado(fields, tb_resultado):
     table += "</table>"
 
     tb_resultado.setHtml(style + table)
+
+
+def mostrar_resultado_tablas(datos, tb_resultado, column1, column2):
+    tb_resultado.clear()
+    style = "<style>"
+    style += "table { border-collapse: collapse; width: 100%; }"
+    style += "th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }"
+    style += "th { background-color: #f2f2f2; }"
+    style += "tr:hover { background-color: #f5f5f5; }"
+    style += ".highlighted { background-color: #BFDA7F; }"
+    style += "</style>"
+
+    table = "<table>"
+    table += f"<tr><th>N°</th><th>{column1}</th><th>{column2}</th></tr>"
+    row1, row2 = datos
+    for i in range(0, len(row1)):
+        table += f"<tr><td>{i + 1}</td><td>{row1[i]:.2f}</td><td>{row2[i]:.2f}</td>"
+
+
+    table += "</table>"
+
+    tb_resultado.setHtml(style + table)

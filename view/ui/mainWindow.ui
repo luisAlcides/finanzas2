@@ -31,6 +31,7 @@
     <addaction name="qa_CAMP"/>
     <addaction name="qa_costo_acciones_preferentes"/>
     <addaction name="qa_modelo_crecimiento_constante_dividendo"/>
+    <addaction name="qa_precio_accion_hoy"/>
    </widget>
    <widget class="QMenu" name="menuCreditos">
     <property name="title">
@@ -44,6 +45,8 @@
     </property>
     <addaction name="actionRendimiento_por_dividendo"/>
     <addaction name="qa_rendimiento_esperado"/>
+    <addaction name="qa_rendimiento_requerido"/>
+    <addaction name="qa_rendimiento_esperado_multiple"/>
    </widget>
    <addaction name="menuArchivo"/>
    <addaction name="menuCreditos"/>
@@ -108,14 +111,29 @@
     <string>CAPM</string>
    </property>
   </action>
+  <action name="qa_modelo_crecimiento_constante_dividendo">
+   <property name="text">
+    <string>Modelo del crecimiento constante del dividendo</string>
+   </property>
+  </action>
+  <action name="qa_precio_accion_hoy">
+   <property name="text">
+    <string>Precio acción hoy</string>
+   </property>
+  </action>
   <action name="qa_rendimiento_esperado">
    <property name="text">
     <string>Rendimiento Esperado</string>
    </property>
   </action>
-  <action name="qa_modelo_crecimiento_constante_dividendo">
+  <action name="qa_rendimiento_requerido">
    <property name="text">
-    <string>Modelo del crecimiento constante del dividendo</string>
+    <string>Rendimiento Requerido</string>
+   </property>
+  </action>
+  <action name="qa_rendimiento_esperado_multiple">
+   <property name="text">
+    <string>Rendimiento Esperado Multiple</string>
    </property>
   </action>
  </widget>

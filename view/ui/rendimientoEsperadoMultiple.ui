@@ -9,12 +9,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>890</width>
+    <width>1080</width>
     <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Modelo del crecimiento constante del dividendo</string>
+   <string>Rendimiento Esperado cuando se tiene gran número de inversiones</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -28,7 +28,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Modelo del crecimiento constante del dividendo</string>
+       <string>Rendimiento Esperado cuando se tiene gran número de inversiones</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -39,21 +39,21 @@
      <widget class="QTextBrowser" name="textBrowser">
       <property name="html">
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;title&gt;Costo de Capital Propio&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;title&gt;Precio de la acción hoy&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:160%;&quot;&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-weight:700;&quot;&gt;P0&lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif';&quot;&gt; es el precio actual de la acción. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:160%;&quot;&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-weight:700;&quot;&gt;D1&lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif';&quot;&gt; es el dividendo esperado en el próximo año. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:160%;&quot;&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-weight:700;&quot;&gt;r&lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif';&quot;&gt; es la tasa de rendimiento requerida. &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:160%;&quot;&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-weight:700;&quot;&gt;g&lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif';&quot;&gt; es la tasa de crecimiento constante de los dividendos.&lt;/span&gt; &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:160%;&quot;&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-weight:700;&quot;&gt;P0: &lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif';&quot;&gt;Precio de la acción hoy &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:160%;&quot;&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-weight:700;&quot;&gt;Div1: &lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif';&quot;&gt; Dividendos &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:160%;&quot;&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-weight:700;&quot;&gt;g: &lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif';&quot;&gt;Tasa de crecimiento&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; line-height:160%;&quot;&gt;&lt;span style=&quot; font-family:'Arial','sans-serif'; font-weight:700;&quot;&gt;rE: &lt;/span&gt;&lt;span style=&quot; font-family:'Arial','sans-serif';&quot;&gt;Rendimiento Esperado&lt;/span&gt; &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="txt_D1">
+     <widget class="QLineEdit" name="txt_pij">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
@@ -63,31 +63,19 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string/>
       </property>
       <property name="placeholderText">
-       <string>Div1</string>
+       <string>Pij</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="txt_r">
+     <widget class="QLineEdit" name="txt_rij">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
        </font>
       </property>
       <property name="placeholderText">
-       <string>r</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="txt_g">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="placeholderText">
-       <string>g</string>
+       <string>Rij</string>
       </property>
      </widget>
     </item>
@@ -116,13 +104,14 @@ li.checked::marker { content: &quot;\2612&quot;; }
      </widget>
     </item>
     <item>
-     <widget class="QTextBrowser" name="tb_resultado">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QTextBrowser" name="tb_tablas"/>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="tb_resultado"/>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>

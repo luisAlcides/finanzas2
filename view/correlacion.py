@@ -62,13 +62,15 @@ class Correlacion(QMainWindow):
         varianza = np.var(xi, ddof=1)
 
         beta = covarianza / varianza
-        des_x = np.std(xi)
-        des_y = np.std(yi)
+        des_x = np.std(xi, ddof=1)
+        des_y = np.std(yi, ddof=1)
         nivel_correlacion = np.corrcoef(xi, yi)[0, 1]
 
         resultado = [
             [covarianza, "Cov", "Covarianza", False, False],
             [varianza, "Var", "Varianza", False, False],
+            [des_x, "σx", "Desviación estándar x", False, False],
+            [des_y, "σy", "Desviación estándar y", False, False],
             [beta, "β", "Beta", False, False],
             [(nivel_correlacion * 100), "ρ", "Nivel de correlación", False, True, ],
 
@@ -81,6 +83,8 @@ class Correlacion(QMainWindow):
         self.datos_tabla_pdf.append(['Variable', 'Descripción', 'Valor'])
         self.datos_tabla_pdf.append(['Cov', 'Covarianza', covarianza])
         self.datos_tabla_pdf.append(['Var', 'Varianza', varianza])
+        self.datos_tabla_pdf.append(['σx', 'Desviación estándar x', des_x])
+        self.datos_tabla_pdf.append(['σy', 'Desviación estándar y', des_y])
         self.datos_tabla_pdf.append(['β', 'Beta', beta])
         self.datos_tabla_pdf.append(['ρ', 'Nivel de correlación', nivel_correlacion])
         self.datos_tabla_pdf.append(["Σ", "Sumatoria de (xi - µx)(yi - µy)", sumatoria_varianza])

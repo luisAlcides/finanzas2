@@ -29,13 +29,11 @@ class DesviacionEstandar(QMainWindow):
         if not validate_array(self.ui.txt_ri, 'Rendimientos'):
             return
 
-        if not validate_fields([[self.ui.txt_miu, 'number', 'Media (µ)']]):
-            return
 
         ri_con_comas = self.ui.txt_ri.text()
         ri_str = ri_con_comas.split(',')
         ri = [float(number) for number in ri_str]
-        miu = float(self.ui.txt_miu.text())
+        miu = np.average(ri)
         des = []
         ri_miu = []
         try:
@@ -66,7 +64,6 @@ class DesviacionEstandar(QMainWindow):
 
     def limpiar(self):
         self.ui.txt_ri.clear()
-        self.ui.txt_miu.clear()
         self.ui.tb_resultado.clear()
         self.datos_tabla_pdf = []
         self.other_data_pdf = []

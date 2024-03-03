@@ -94,21 +94,6 @@ width: 70%;</string>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="txt_miu">
-      <property name="font">
-       <font>
-        <family>Segoe UI</family>
-        <pointsize>16</pointsize>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="placeholderText">
-       <string>µ</string>
-      </property>
-     </widget>
-    </item>
-    <item>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QPushButton" name="btn_calcular">

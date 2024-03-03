@@ -23,4 +23,11 @@ def validate_fields(fields):
     return True
 
 
-
+def validate_array(fields, lbl):
+    for i in range(0, len(fields.text().strip().split(','))):
+        try:
+            float(fields.text().strip().split(',')[i])
+        except ValueError:
+            message(f'El campo {lbl} debe ser un arreglo de números')
+            return False
+    return True

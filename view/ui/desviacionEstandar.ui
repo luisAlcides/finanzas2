@@ -125,6 +125,13 @@ width: 70%;</string>
       <item>
        <widget class="QTextBrowser" name="tb_resultado"/>
       </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QWidget" name="widgetGrafico" native="true"/>
+        </item>
+       </layout>
+      </item>
      </layout>
     </item>
    </layout>

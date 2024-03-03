@@ -53,6 +53,7 @@
      <string>Estadistica</string>
     </property>
     <addaction name="qa_desviacion_estandar"/>
+    <addaction name="qa_correlacion"/>
    </widget>
    <addaction name="menuArchivo"/>
    <addaction name="menuCreditos"/>
@@ -147,6 +148,11 @@
    <property name="text">
     <string>Desviación estándar 
 </string>
+   </property>
+  </action>
+  <action name="qa_correlacion">
+   <property name="text">
+    <string>Correlación</string>
    </property>
   </action>
  </widget>

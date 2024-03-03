@@ -1,5 +1,6 @@
 from PyQt6 import uic
 
+from view.correlacion import Correlacion
 from view.costoAccionesPreferentes import CostoAccionesPreferentes
 from view.CAMP import CAMP
 from view.desviacionEstandar import DesviacionEstandar
@@ -19,12 +20,14 @@ class MainWindow():
         self.ui.qa_financiamiento_con_deuda.triggered.connect(self.openFinanciamientoConDeuda)
         self.ui.qa_CAMP.triggered.connect(self.openCAMP)
         self.ui.qa_costo_acciones_preferentes.triggered.connect(self.openCostoAccionesPreferentes)
-        self.ui.qa_modelo_crecimiento_constante_dividendo.triggered.connect(self.openModeloCrecimientoConstanteDividendo)
+        self.ui.qa_modelo_crecimiento_constante_dividendo.triggered.connect(
+            self.openModeloCrecimientoConstanteDividendo)
         self.ui.qa_precio_accion_hoy.triggered.connect(self.openPrecioAccionHoy)
         self.ui.qa_rendimiento_esperado.triggered.connect(self.openRendimientoEsperado)
         self.ui.qa_rendimiento_requerido.triggered.connect(self.openRendimientoRequerido)
         self.ui.qa_rendimiento_esperado_multiple.triggered.connect(self.openRendimientoEsperadoMultiple)
         self.ui.qa_desviacion_estandar.triggered.connect(self.openDesviacionEstandar)
+        self.ui.qa_correlacion.triggered.connect(self.openCorrelacion)
 
     def openFinanciamientoConDeuda(self):
         self.financiamiento_con_deuda = FinanciamientoConDeuda()
@@ -61,3 +64,7 @@ class MainWindow():
     def openDesviacionEstandar(self):
         self.desviacion_estandar = DesviacionEstandar()
         return self.desviacion_estandar
+
+    def openCorrelacion(self):
+        self.correlacion = Correlacion()
+        return self.correlacion

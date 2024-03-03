@@ -34,14 +34,14 @@ def mostrar_resultado(fields, tb_resultado):
     for i in range(0, len(fields)):
         if fields[i][4]:
             if fields[i][3]:
-                table += f"<tr><td class='highlighted'>{fields[i][1]}</td><td class='highlighted'>{fields[i][2]}</td><td class='highlighted'>{fields[i][0]:.4f}%</td></tr>"
+                table += f"<tr><td class='highlighted'>{fields[i][1]}</td><td class='highlighted'>{fields[i][2]}</td><td class='highlighted'>{fields[i][0]:.2f}%</td></tr>"
             else:
-                table += f"<tr><td>{fields[i][1]}</td><td>{fields[i][2]}</td><td>{fields[i][0]:.4f}%</td></tr>"
+                table += f"<tr><td>{fields[i][1]}</td><td>{fields[i][2]}</td><td>{fields[i][0]:.2f}%</td></tr>"
         else:
             if fields[i][3]:
-                table += f"<tr><td class='highlighted'>{fields[i][1]}</td><td class='highlighted'>{fields[i][2]}</td><td class='highlighted'>{fields[i][0]:.4f}</td></tr>"
+                table += f"<tr><td class='highlighted'>{fields[i][1]}</td><td class='highlighted'>{fields[i][2]}</td><td class='highlighted'>{fields[i][0]:.2f}</td></tr>"
             else:
-                table += f"<tr><td>{fields[i][1]}</td><td>{fields[i][2]}</td><td>{fields[i][0]:.4f}</td></tr>"
+                table += f"<tr><td>{fields[i][1]}</td><td>{fields[i][2]}</td><td>{fields[i][0]:.2f}</td></tr>"
 
     table += "</table>"
 

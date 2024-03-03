@@ -10,11 +10,11 @@
     <x>0</x>
     <y>0</y>
     <width>1080</width>
-    <height>600</height>
+    <height>627</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Desviación estándar</string>
+   <string>Correlación</string>
   </property>
   <property name="styleSheet">
    <string notr="true">font: 16pt &quot;Segoe UI&quot;;
@@ -37,7 +37,7 @@ width: 70%;</string>
        <string notr="true">font: 700 italic 18pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
-       <string>Desviación estándar</string>
+       <string>Correlación</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -47,26 +47,19 @@ width: 70%;</string>
     <item>
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>σ: Desviación estándar</string>
+       <string>xi: Rendimientos de la empresa número 1</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="label_2">
       <property name="text">
-       <string>𝑟𝑖: Rendimientos</string>
+       <string>yi: Rendimientos de la empresa número 2</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>µ: La media de una distribución de probabilidad</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_4">
       <property name="styleSheet">
        <string notr="true">font: 700 16pt &quot;Segoe UI&quot;;</string>
       </property>
@@ -76,7 +69,14 @@ width: 70%;</string>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="txt_ri">
+     <widget class="QLineEdit" name="txt_nombre_empresa_x">
+      <property name="placeholderText">
+       <string>Ingrese el nombre de la empresa x</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_x">
       <property name="font">
        <font>
         <family>Segoe UI</family>
@@ -89,12 +89,19 @@ width: 70%;</string>
        <string/>
       </property>
       <property name="placeholderText">
-       <string>ri</string>
+       <string>xi</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="txt_miu">
+     <widget class="QLineEdit" name="txt_nombre_empresa_y">
+      <property name="placeholderText">
+       <string>Ingrese el nombre de la empresa y</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_y">
       <property name="font">
        <font>
         <family>Segoe UI</family>
@@ -104,7 +111,7 @@ width: 70%;</string>
        </font>
       </property>
       <property name="placeholderText">
-       <string>µ</string>
+       <string>yi</string>
       </property>
      </widget>
     </item>

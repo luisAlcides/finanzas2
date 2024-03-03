@@ -25,6 +25,8 @@ class DesviacionEstandar(QMainWindow):
         self.ui.btn_generar_pdf.clicked.connect(self.generate_pdf)
 
     def resolver(self):
+        self.datos_tabla_pdf = []
+        self.other_data_pdf = []
 
         if not validate_array(self.ui.txt_ri, 'Rendimientos'):
             return

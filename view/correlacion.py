@@ -27,6 +27,8 @@ class Correlacion(QMainWindow):
         self.ui.btn_generar_pdf.clicked.connect(self.generate_pdf)
 
     def resolver(self):
+        self.datos_tabla_pdf = []
+        self.other_data_pdf = []
         fields = [[self.ui.txt_nombre_empresa_x, 'string', 'nombre empresa x'],
                   [self.ui.txt_x, 'array', 'xi'],
                   [self.ui.txt_nombre_empresa_y, 'string', 'nombre empresa y'],

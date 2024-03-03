@@ -21,27 +21,34 @@ def clean_fields(fields):
 
 def mostrar_resultado(fields, tb_resultado):
     tb_resultado.clear()
-    style = "<style>"
-    style += "table { border-collapse: collapse; width: 100%; }"
-    style += "th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }"
-    style += "th { background-color: #f2f2f2; }"
-    style += "tr:hover { background-color: #f5f5f5; }"
-    style += ".highlighted { background-color: #BFDA7F; }"
-    style += "</style>"
+    style = """
+    <style>
+    table { border-collapse: collapse; width: 100%; }
+    th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+    th { background-color: #f2f2f2; }
+    tr:hover { background-color: #f5f5f5; }
+    .highlighted { background-color: #BFDA7F; }
+    </style>
+    """
 
     table = "<table>"
     table += "<tr><th>Variable</th><th>Nombre de la variable</th><th>Valor</th></tr>"
-    for i in range(0, len(fields)):
-        if fields[i][4]:
-            if fields[i][3]:
-                table += f"<tr><td class='highlighted'>{fields[i][1]}</td><td class='highlighted'>{fields[i][2]}</td><td class='highlighted'>{fields[i][0]:.2f}%</td></tr>"
-            else:
-                table += f"<tr><td>{fields[i][1]}</td><td>{fields[i][2]}</td><td>{fields[i][0]:.2f}%</td></tr>"
+
+    for field in fields:
+        variable, lbl, descripcion, highlighted, percent, digitos = field
+        valor_format = "{:.%df}" % int(digitos)
+
+        if highlighted:
+            clase_highlight = " highlighted"
         else:
-            if fields[i][3]:
-                table += f"<tr><td class='highlighted'>{fields[i][1]}</td><td class='highlighted'>{fields[i][2]}</td><td class='highlighted'>{fields[i][0]:.2f}</td></tr>"
-            else:
-                table += f"<tr><td>{fields[i][1]}</td><td>{fields[i][2]}</td><td>{fields[i][0]:.2f}</td></tr>"
+            clase_highlight = ""
+
+        if percent:
+            valor = valor_format.format(variable) + "%"
+        else:
+            valor = valor_format.format(variable)
+
+        table += f"<tr><td>{lbl}</td><td>{descripcion}</td><td class='{clase_highlight}'>{valor}</td></tr>"
 
     table += "</table>"
 
@@ -101,8 +108,6 @@ def generar_pdf(fileName, title, datos_tabla, grafica='', other_data=''):
     flowables.append(titulo)
 
     tabla = Table(datos_tabla)
-
-
 
     style = TableStyle([
         ('BACKGROUND', (0, 0), (-1, 0), colors.green),

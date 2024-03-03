@@ -1,5 +1,6 @@
 from PyQt6 import uic
 
+from view.capitalMarketLine import CapitalMarketLine
 from view.correlacion import Correlacion
 from view.costoAccionesPreferentes import CostoAccionesPreferentes
 from view.CAMP import CAMP
@@ -28,6 +29,7 @@ class MainWindow():
         self.ui.qa_rendimiento_esperado_multiple.triggered.connect(self.openRendimientoEsperadoMultiple)
         self.ui.qa_desviacion_estandar.triggered.connect(self.openDesviacionEstandar)
         self.ui.qa_correlacion.triggered.connect(self.openCorrelacion)
+        self.ui.qa_capital_market_line.triggered.connect(self.openCapitalMarketLine)
 
     def openFinanciamientoConDeuda(self):
         self.financiamiento_con_deuda = FinanciamientoConDeuda()
@@ -68,3 +70,7 @@ class MainWindow():
     def openCorrelacion(self):
         self.correlacion = Correlacion()
         return self.correlacion
+
+    def openCapitalMarketLine(self):
+        self.capital_market_line = CapitalMarketLine()
+        return self.capital_market_line

@@ -30,16 +30,16 @@
     <addaction name="qa_financiamiento_con_deuda"/>
     <addaction name="qa_financiamiento_acciones_preferentes"/>
     <addaction name="qa_CAMP"/>
-    <addaction name="qa_modelo_crecimiento_constante_dividendo"/>
-    <addaction name="qa_precio_accion_hoy"/>
     <addaction name="qa_capital_market_line"/>
     <addaction name="qa_security_market_line"/>
    </widget>
    <widget class="QMenu" name="menuCreditos">
     <property name="title">
-     <string>Dividendos</string>
+     <string>Dividendos Acciones Comunes y Preferenciales</string>
     </property>
     <addaction name="actionDesarrolladores"/>
+    <addaction name="qa_precio_accion_hoy"/>
+    <addaction name="qa_modelo_crecimiento_constante_dividendo"/>
    </widget>
    <widget class="QMenu" name="menuRendimientos">
     <property name="title">

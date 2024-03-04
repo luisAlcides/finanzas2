@@ -87,17 +87,25 @@ width: 70%;</string>
     </item>
 
     <item>
-     <widget class="QLineEdit" name="txt_pij">
+     <widget class="QLineEdit" name="txt_r_real">
       <property name="placeholderText">
-       <string>Pij</string>
+       <string>r*</string>
       </property>
      </widget>
     </item>
 
     <item>
-     <widget class="QLineEdit" name="txt_rij">
+     <widget class="QLineEdit" name="txt_ip">
       <property name="placeholderText">
-       <string>Rij</string>
+       <string>IP</string>
+      </property>
+     </widget>
+    </item>
+
+     <item>
+     <widget class="QLineEdit" name="txt_rpj">
+      <property name="placeholderText">
+       <string>RPj</string>
       </property>
      </widget>
     </item>

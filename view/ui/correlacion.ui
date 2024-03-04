@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>1080</width>
-    <height>627</height>
+    <height>631</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -122,6 +122,35 @@ width: 70%;</string>
         <property name="text">
          <string>Calcular</string>
         </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="cb_digitos">
+        <item>
+         <property name="text">
+          <string>Digitos</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Todos</string>
+         </property>
+        </item>
        </widget>
       </item>
       <item>

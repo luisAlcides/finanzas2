@@ -68,13 +68,23 @@ class Correlacion(QMainWindow):
         des_y = np.std(yi, ddof=1)
         nivel_correlacion = np.corrcoef(xi, yi)[0, 1]
 
+        digito_select = self.ui.cb_digitos.currentText()
+
+        if digito_select == 'Todos':
+            digito_select = '50'
+        else:
+            if digito_select != 'Digitos':
+                digito_select = self.ui.cb_digitos.currentText()
+            else:
+                digito_select = '2'
+
         resultado = [
-            [covarianza, "Cov", "Covarianza", False, False],
-            [varianza, "Var", "Varianza", False, False],
-            [des_x, "σx", "Desviación estándar x", False, False],
-            [des_y, "σy", "Desviación estándar y", False, False],
-            [beta, "β", "Beta", False, False],
-            [(nivel_correlacion * 100), "ρ", "Nivel de correlación", False, True, ],
+            [covarianza, "Cov", "Covarianza", False, False,digito_select],
+            [varianza, "Var", "Varianza", False, False,digito_select],
+            [des_x, "σx", "Desviación estándar x", False, False,digito_select],
+            [des_y, "σy", "Desviación estándar y", False, False,digito_select],
+            [beta, "β", "Beta", False, False,digito_select],
+            [(nivel_correlacion * 100), "ρ", "Nivel de correlación", False, True,digito_select],
 
         ]
         mostrar_resultado(resultado, self.ui.tb_resultado)
@@ -106,6 +116,7 @@ class Correlacion(QMainWindow):
         self.se_calculo = False
         self.ui.txt_nombre_empresa_x.clear()
         self.ui.txt_nombre_empresa_y.clear()
+        self.ui.cb_digitos.setCurrentIndex(0)
 
         if self.ui.widgetGrafico.layout() is not None:
             while self.ui.widgetGrafico.layout().count():

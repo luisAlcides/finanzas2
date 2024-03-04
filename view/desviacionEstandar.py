@@ -50,8 +50,19 @@ class DesviacionEstandar(QMainWindow):
             message('Rendimientos debe ser un array ejemplo: 1,2,3')
             self.limpiar()
             return
+
+        digito_select = self.ui.cb_digitos.currentText()
+
+        if digito_select == 'Todos':
+            digito_select = '50'
+        else:
+            if digito_select != 'Digitos':
+                digito_select = self.ui.cb_digitos.currentText()
+            else:
+                digito_select = '2'
+
         resultado = [
-            [des, "σ", "Desviación estándar", False, False],
+            [des, "σ", "Desviación estándar", False, False, digito_select],
         ]
 
         mostrar_resultado(resultado, self.ui.tb_resultado)
@@ -70,6 +81,7 @@ class DesviacionEstandar(QMainWindow):
         self.datos_tabla_pdf = []
         self.other_data_pdf = []
         self.se_calculo = False
+        self.ui.cb_digitos.setCurrentIndex(0)
 
         if self.ui.widgetGrafico.layout() is not None:
             while self.ui.widgetGrafico.layout().count():

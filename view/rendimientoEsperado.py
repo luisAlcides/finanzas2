@@ -66,6 +66,7 @@ class RendimientoEsperado:
         self.ui.tb_resultado.clear()
         self.datos_tabla_pdf = []
         self.se_calculo = False
+        self.ui.cb_digitos.setCurrentIndex(0)
 
     def generate_pdf(self):
         if self.se_calculo:

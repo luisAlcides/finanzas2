@@ -103,6 +103,35 @@ width: 70%;</string>
        </widget>
       </item>
       <item>
+       <widget class="QComboBox" name="cb_digitos">
+        <item>
+         <property name="text">
+          <string>Digitos</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Todos</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="btn_limpiar">
         <property name="text">
          <string>Limpiar</string>

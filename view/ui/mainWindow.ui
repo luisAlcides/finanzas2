@@ -145,7 +145,7 @@
   </action>
   <action name="qa_rendimiento_esperado_multiple">
    <property name="text">
-    <string>Rendimiento Esperado Multiple</string>
+    <string>Rendimiento Esperado Multiple (Probabilidad Ocurrencia)</string>
    </property>
   </action>
   <action name="qa_desviacion_estandar">

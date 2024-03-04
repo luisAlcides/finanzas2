@@ -57,6 +57,7 @@
     <addaction name="qa_desviacion_estandar"/>
     <addaction name="qa_correlacion"/>
     <addaction name="qa_varianza"/>
+    <addaction name="qa_covarianza"/>
    </widget>
    <addaction name="menuArchivo"/>
    <addaction name="menuCreditos"/>
@@ -171,6 +172,11 @@
   <action name="qa_varianza">
    <property name="text">
     <string>Varianza</string>
+   </property>
+  </action>
+  <action name="qa_covarianza">
+   <property name="text">
+    <string>Covarianza</string>
    </property>
   </action>
  </widget>

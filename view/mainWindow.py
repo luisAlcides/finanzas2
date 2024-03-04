@@ -4,6 +4,7 @@ from view.capitalMarketLine import CapitalMarketLine
 from view.correlacion import Correlacion
 from view.costoAccionesPreferentes import CostoAccionesPreferentes
 from view.CAMP import CAMP
+from view.covarianza import Covarianza
 from view.desviacionEstandar import DesviacionEstandar
 from view.financiamientoConDeuda import FinanciamientoConDeuda
 from view.modeloCrecimientoConstanteDividendo import ModeloCrecimientoConstanteDividendo
@@ -34,6 +35,7 @@ class MainWindow():
         self.ui.qa_capital_market_line.triggered.connect(self.openCapitalMarketLine)
         self.ui.qa_security_market_line.triggered.connect(self.openSecurityMarketLine)
         self.ui.qa_varianza.triggered.connect(self.openVarianza)
+        self.ui.qa_covarianza.triggered.connect(self.openCovarianza)
 
     def openFinanciamientoConDeuda(self):
         self.financiamiento_con_deuda = FinanciamientoConDeuda()
@@ -86,3 +88,7 @@ class MainWindow():
     def openVarianza(self):
         self.varianza = Varianza()
         return self.varianza
+
+    def openCovarianza(self):
+        self.covarianza = Covarianza()
+        return self.covarianza

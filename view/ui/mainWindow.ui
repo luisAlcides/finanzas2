@@ -56,6 +56,7 @@
     </property>
     <addaction name="qa_desviacion_estandar"/>
     <addaction name="qa_correlacion"/>
+    <addaction name="qa_varianza"/>
    </widget>
    <addaction name="menuArchivo"/>
    <addaction name="menuCreditos"/>
@@ -165,6 +166,11 @@
   <action name="qa_security_market_line">
    <property name="text">
     <string>Security Market Line</string>
+   </property>
+  </action>
+  <action name="qa_varianza">
+   <property name="text">
+    <string>Varianza</string>
    </property>
   </action>
  </widget>

@@ -11,6 +11,7 @@ from view.precioAccionHoy import PrecioAccionHoy
 from view.rendimientoEsperado import RendimientoEsperado
 from view.rendimientoEsperadoMultiple import RendimientoEsperadoMultiple
 from view.rendimientoRequerido import RendimientoRequerido
+from view.securityMarketLine import SecurityMarketLine
 
 
 class MainWindow():
@@ -30,6 +31,7 @@ class MainWindow():
         self.ui.qa_desviacion_estandar.triggered.connect(self.openDesviacionEstandar)
         self.ui.qa_correlacion.triggered.connect(self.openCorrelacion)
         self.ui.qa_capital_market_line.triggered.connect(self.openCapitalMarketLine)
+        self.ui.qa_security_market_line.triggered.connect(self.openSecurityMarketLine)
 
     def openFinanciamientoConDeuda(self):
         self.financiamiento_con_deuda = FinanciamientoConDeuda()
@@ -74,3 +76,7 @@ class MainWindow():
     def openCapitalMarketLine(self):
         self.capital_market_line = CapitalMarketLine()
         return self.capital_market_line
+
+    def openSecurityMarketLine(self):
+        self.security_market_line = SecurityMarketLine()
+        return self.security_market_line

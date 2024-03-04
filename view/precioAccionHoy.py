@@ -8,6 +8,7 @@ class PrecioAccionHoy:
     def __init__(self):
         self.ui = uic.loadUi('view/ui/precioAccionHoy.ui')
         self.datos_tabla_pdf = []
+        self.se_calculo = False
         self.ui.showMaximized()
         self.ui.btn_calcular.clicked.connect(self.resolver)
         self.ui.btn_limpiar.clicked.connect(self.limpiar)
@@ -65,8 +66,6 @@ class PrecioAccionHoy:
         self.datos_tabla_pdf.append(['rd', 'Rendimiento por Dividendo', rd])
         self.datos_tabla_pdf.append(['ge', 'Ganancia Capital Esperada', ganancia_capital_esperada])
         self.datos_tabla_pdf.append(['tg', 'Tasa de Ganancia', tasa_ganancia])
-
-
         self.se_calculo = True
 
     def limpiar(self):
@@ -74,6 +73,8 @@ class PrecioAccionHoy:
         self.ui.txt_re.clear()
         self.ui.txt_p1.clear()
         self.ui.tb_resultado.clear()
+        self.datos_tabla_pdf = []
+        self.se_calculo = False
 
     def generate_pdf(self):
         if self.se_calculo:

@@ -48,14 +48,13 @@ class CAMP:
             else:
                 digito_select = '2'
 
-
         resultado = [
-            [ki_porcentaje, "Ki",'Rendimiento Requerido del Activo (CAPM)', True, True, digito_select],
-            [rf_porcentaje, "Rf",'Tasa de rendimiento libre de riesgo', False, True, digito_select],
-            [bj, 'β','Coeficiente beta', False, False, digito_select],
-            [km_porcentaje,"Km",'Rendimiento del mercado', False, True, digito_select],
-            [kmrf_porcentaje, "Km - Rf",'Prima de riesgo del mercado', False, True, digito_select],
-            [bj_kmrf_porcentaje, "β * (Km - Rf)",'Prima de riesgo del activo', True, True, digito_select]
+            [ki_porcentaje, "Ki", 'Rendimiento Requerido del Activo (CAPM)', True, True, digito_select],
+            [rf_porcentaje, "Rf", 'Tasa de rendimiento libre de riesgo', False, True, digito_select],
+            [bj, 'β', 'Coeficiente beta', False, False, digito_select],
+            [km_porcentaje, "Km", 'Rendimiento del mercado', False, True, digito_select],
+            [kmrf_porcentaje, "Km - Rf", 'Prima de riesgo del mercado', False, True, digito_select],
+            [bj_kmrf_porcentaje, "β * (Km - Rf)", 'Prima de riesgo del activo', True, True, digito_select]
         ]
 
         mostrar_resultado(resultado, self.ui.tb_resultado)
@@ -67,21 +66,17 @@ class CAMP:
         self.datos_tabla_pdf.append(['Km - Rf', 'Prima de riesgo del mercado', kmrf_porcentaje])
         self.datos_tabla_pdf.append(['β * (Km - Rf)', 'Prima de riesgo del activo', bj_kmrf_porcentaje])
         self.se_calculo = True
-    def limpiar(self):
-        fields = [
-            self.ui.txt_rf,
-            self.ui.txt_bj,
-            self.ui.txt_km
-        ]
-        for field in fields:
-            field.clear()
-        self.ui.tb_resultado.clear()
 
+    def limpiar(self):
+        self.ui.txt_rf.clear()
+        self.ui.txt_bj.clear()
+        self.ui.txt_km.clear()
+        self.ui.tb_resultado.clear()
+        self.datos_tabla_pdf = []
+        self.se_calculo = False
 
     def generate_pdf(self):
         if self.se_calculo:
             generar_pdf_dialogo('CAMP', self.datos_tabla_pdf)
         else:
             message('No se ha realizado ningún cálculo')
-
-

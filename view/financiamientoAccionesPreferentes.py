@@ -24,8 +24,8 @@ class FinanciamientoAccionesPreferentes:
         if not validate_fields(fields):
             return
 
-        dp = float(self.ui.txt_dp.text())
-        np = float(self.ui.txt_np.text())
+        dp = float(self.ui.txt_dp.text().strip())
+        np = float(self.ui.txt_np.text().strip())
 
         kp = dp / np
         kp = kp * 100
@@ -55,6 +55,8 @@ class FinanciamientoAccionesPreferentes:
         self.ui.txt_dp.clear()
         self.ui.txt_np.clear()
         self.ui.tb_resultado.clear()
+        self.datos_tabla_pdf = []
+        self.se_calculo = False
 
     def generate_pdf(self):
         if self.se_calculo:

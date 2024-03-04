@@ -2,7 +2,7 @@ from PyQt6 import uic
 
 from view.capitalMarketLine import CapitalMarketLine
 from view.correlacion import Correlacion
-from view.costoAccionesPreferentes import CostoAccionesPreferentes
+from view.financiamientoAccionesPreferentes import FinanciamientoAccionesPreferentes
 from view.CAMP import CAMP
 from view.covarianza import Covarianza
 from view.desviacionEstandar import DesviacionEstandar
@@ -23,7 +23,7 @@ class MainWindow():
 
         self.ui.qa_financiamiento_con_deuda.triggered.connect(self.openFinanciamientoConDeuda)
         self.ui.qa_CAMP.triggered.connect(self.openCAMP)
-        self.ui.qa_costo_acciones_preferentes.triggered.connect(self.openCostoAccionesPreferentes)
+        self.ui.qa_financiamiento_acciones_preferentes.triggered.connect(self.financiamientoAccionesPreferentes)
         self.ui.qa_modelo_crecimiento_constante_dividendo.triggered.connect(
             self.openModeloCrecimientoConstanteDividendo)
         self.ui.qa_precio_accion_hoy.triggered.connect(self.openPrecioAccionHoy)
@@ -45,9 +45,9 @@ class MainWindow():
         self.camp = CAMP()
         return self.camp
 
-    def openCostoAccionesPreferentes(self):
-        self.costo_acciones_preferentes = CostoAccionesPreferentes()
-        return self.costo_acciones_preferentes
+    def financiamientoAccionesPreferentes(self):
+        self.financiamiento_acciones_preferentes = FinanciamientoAccionesPreferentes()
+        return self.financiamiento_acciones_preferentes
 
     def openModeloCrecimientoConstanteDividendo(self):
         self.modelo_crecimiento_constante_dividendo = ModeloCrecimientoConstanteDividendo()

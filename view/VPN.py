@@ -6,9 +6,9 @@ from utils.validation import validate_fields
 import numpy_financial as npf
 
 
-class VPF:
+class VPN:
     def __init__(self):
-        self.ui = uic.loadUi('view/ui/VPF.ui')
+        self.ui = uic.loadUi('view/ui/VPN.ui')
         self.ui.showMaximized()
         self.datos_tabla_pdf = []
         self.other_data_pdf = []
@@ -22,23 +22,23 @@ class VPF:
         self.other_data_pdf = []
 
         fields = [
-            [self.ui.txt_ft, 'array', "Ft"],
+            [self.ui.txt_ct, 'array', "Ct"],
             [self.ui.txt_i, 'number', "i"]
         ]
         if not validate_fields(fields):
             return
 
-        ft_con_comas = self.ui.txt_ft.text().strip().split(',')
-        ft = [float(number) for number in ft_con_comas]
+        ct_con_comas = self.ui.txt_ct.text().strip().split(',')
+        ct = [float(number) for number in ct_con_comas]
         i = float(self.ui.txt_i.text().strip())
-        ft_values = []
+        ct_values = []
         n = 0
 
-        for j in range(len(ft)):
-            n = (j + 1)
-            ft_values.append(npf.pv(rate=i, nper=n, pmt=0, fv=-ft[j]))
+        for j in range(len(ct)):
+            n = j
+            ct_values.append(npf.pv(rate=i, nper=n, pmt=0, fv=-ct[j]))
 
-        vp = sum(ft_values)
+        VPN = npf.npv(i, ct)
 
         digito_select = self.ui.cb_digitos.currentText()
 
@@ -50,24 +50,36 @@ class VPF:
             else:
                 digito_select = '2'
 
-        resultado = [[vp, 'VP', 'Valor presente', True, False, digito_select],
+        resultado = [[VPN, 'VP', 'Valor presente', True, False, digito_select],
                      [(i * 100), 'i', 'Tasa de interés', False, True, digito_select],
                      [n, 'n', 'Número de periodos', False, False, digito_select]]
 
         mostrar_resultado(resultado, self.ui.tb_resultado)
         self.datos_tabla_pdf.append(['Variable', 'Descripción', 'Valor'])
-        self.datos_tabla_pdf.append(['VP', 'Valor presente', vp])
+        self.datos_tabla_pdf.append(['VPN', 'Valor presente', VPN])
         self.datos_tabla_pdf.append(['i', 'Tasa de interés', i])
         self.datos_tabla_pdf.append(['n', 'Número de periodos', n])
 
-        self.other_data_pdf.append(['N°', 'flujos de caja', 'Sumatoria de flujos de caja'])
-        for j in range(len(ft)):
-            self.other_data_pdf.append([j + 1, ft[j], ft_values[j]])
+        self.other_data_pdf.append(
+            ['Año', 'Flujo de Caja','Valor Presente', 'Valor Presente Acumulado'])
+
+        valor_presente_acumulado = 0
+        for j in range(len(ct)):
+            if j == 0:
+                factor_descuento = 1
+            else:
+                factor_descuento = (1 + i) ** j
+
+            valor_presente = ct[j] / factor_descuento
+            valor_presente_acumulado += valor_presente
+
+            self.other_data_pdf.append([str(j), str(ct[j]),valor_presente,
+                                        valor_presente_acumulado])
 
         self.se_calculo = True
 
     def limpiar(self):
-        self.ui.txt_ft.clear()
+        self.ui.txt_ct.clear()
         self.ui.txt_i.clear()
         self.ui.tb_resultado.clear()
         self.datos_tabla_pdf = []
@@ -77,7 +89,7 @@ class VPF:
 
     def generate_pdf(self):
         if self.se_calculo:
-            generar_pdf_dialogo('Valor Presente de una serie de flujos de caja',
+            generar_pdf_dialogo('Valor Presente Neto',
                                 datos_tabla=self.datos_tabla_pdf, other_data=self.other_data_pdf)
         else:
             message('No se ha realizado ningún cálculo')

@@ -2,6 +2,7 @@ from PyQt6 import uic
 
 from view.VP import VP
 from view.VPF import VPF
+from view.VPN import VPN
 from view.capitalMarketLine import CapitalMarketLine
 from view.correlacion import Correlacion
 from view.financiamientoAccionesPreferentes import FinanciamientoAccionesPreferentes
@@ -40,6 +41,7 @@ class MainWindow():
         self.ui.qa_covarianza.triggered.connect(self.openCovarianza)
         self.ui.qa_VP.triggered.connect(self.openVP)
         self.ui.qa_VPF.triggered.connect(self.openVPF)
+        self.ui.qa_VPN.triggered.connect(self.openVPN)
 
     def openFinanciamientoConDeuda(self):
         self.financiamiento_con_deuda = FinanciamientoConDeuda()
@@ -105,3 +107,6 @@ class MainWindow():
         self.vpf = VPF()
         return self.vpf
 
+    def openVPN(self):
+        self.vpn = VPN()
+        return self.vpn

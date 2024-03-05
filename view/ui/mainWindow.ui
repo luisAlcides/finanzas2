@@ -34,6 +34,7 @@
     <addaction name="qa_security_market_line"/>
     <addaction name="qa_VP"/>
     <addaction name="qa_VPF"/>
+    <addaction name="qa_VPN"/>
    </widget>
    <widget class="QMenu" name="menuCreditos">
     <property name="title">
@@ -187,6 +188,11 @@
   <action name="qa_VPF">
    <property name="text">
     <string>VPF</string>
+   </property>
+  </action>
+  <action name="qa_VPN">
+   <property name="text">
+    <string>VPN</string>
    </property>
   </action>
  </widget>

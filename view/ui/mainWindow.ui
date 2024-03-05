@@ -35,6 +35,9 @@
     <addaction name="qa_VP"/>
     <addaction name="qa_VPF"/>
     <addaction name="qa_VPN"/>
+    <addaction name="qa_VF"/>
+    <addaction name="qa_TIR"/>
+    <addaction name="qa_TMAR"/>
    </widget>
    <widget class="QMenu" name="menuCreditos">
     <property name="title">
@@ -193,6 +196,21 @@
   <action name="qa_VPN">
    <property name="text">
     <string>VPN</string>
+   </property>
+  </action>
+  <action name="qa_VF">
+   <property name="text">
+    <string>VF</string>
+   </property>
+  </action>
+  <action name="qa_TIR">
+   <property name="text">
+    <string>TIR</string>
+   </property>
+  </action>
+  <action name="qa_TMAR">
+   <property name="text">
+    <string>TMAR</string>
    </property>
   </action>
  </widget>

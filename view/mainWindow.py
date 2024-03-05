@@ -1,5 +1,8 @@
 from PyQt6 import uic
 
+from view.TIR import TIR
+from view.TMAR import TMAR
+from view.VF import VF
 from view.VP import VP
 from view.VPF import VPF
 from view.VPN import VPN
@@ -42,6 +45,9 @@ class MainWindow():
         self.ui.qa_VP.triggered.connect(self.openVP)
         self.ui.qa_VPF.triggered.connect(self.openVPF)
         self.ui.qa_VPN.triggered.connect(self.openVPN)
+        self.ui.qa_VF.triggered.connect(self.openVF)
+        self.ui.qa_TIR.triggered.connect(self.openTIR)
+        self.ui.qa_TMAR.triggered.connect(self.openTMAR)
 
     def openFinanciamientoConDeuda(self):
         self.financiamiento_con_deuda = FinanciamientoConDeuda()
@@ -110,3 +116,16 @@ class MainWindow():
     def openVPN(self):
         self.vpn = VPN()
         return self.vpn
+
+    def openVF(self):
+        self.vf = VF()
+        return self.vf
+
+    def openTIR(self):
+        self.tir = TIR()
+        return self.tir
+
+
+    def openTMAR(self):
+        self.tmar = TMAR()
+        return self.tmar

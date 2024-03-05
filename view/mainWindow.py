@@ -1,5 +1,6 @@
 from PyQt6 import uic
 
+from view.VP import VP
 from view.capitalMarketLine import CapitalMarketLine
 from view.correlacion import Correlacion
 from view.financiamientoAccionesPreferentes import FinanciamientoAccionesPreferentes
@@ -36,6 +37,7 @@ class MainWindow():
         self.ui.qa_security_market_line.triggered.connect(self.openSecurityMarketLine)
         self.ui.qa_varianza.triggered.connect(self.openVarianza)
         self.ui.qa_covarianza.triggered.connect(self.openCovarianza)
+        self.ui.qa_VP.triggered.connect(self.openVP)
 
     def openFinanciamientoConDeuda(self):
         self.financiamiento_con_deuda = FinanciamientoConDeuda()
@@ -92,3 +94,7 @@ class MainWindow():
     def openCovarianza(self):
         self.covarianza = Covarianza()
         return self.covarianza
+
+    def openVP(self):
+        self.vp = VP()
+        return self.vp

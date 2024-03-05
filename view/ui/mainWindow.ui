@@ -32,6 +32,7 @@
     <addaction name="qa_CAMP"/>
     <addaction name="qa_capital_market_line"/>
     <addaction name="qa_security_market_line"/>
+    <addaction name="qa_VP"/>
    </widget>
    <widget class="QMenu" name="menuCreditos">
     <property name="title">
@@ -175,6 +176,11 @@
   <action name="qa_covarianza">
    <property name="text">
     <string>Covarianza</string>
+   </property>
+  </action>
+  <action name="qa_VP">
+   <property name="text">
+    <string>VP</string>
    </property>
   </action>
  </widget>

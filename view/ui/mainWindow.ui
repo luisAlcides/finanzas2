@@ -33,6 +33,7 @@
     <addaction name="qa_capital_market_line"/>
     <addaction name="qa_security_market_line"/>
     <addaction name="qa_VP"/>
+    <addaction name="qa_VPF"/>
    </widget>
    <widget class="QMenu" name="menuCreditos">
     <property name="title">
@@ -181,6 +182,11 @@
   <action name="qa_VP">
    <property name="text">
     <string>VP</string>
+   </property>
+  </action>
+  <action name="qa_VPF">
+   <property name="text">
+    <string>VPF</string>
    </property>
   </action>
  </widget>

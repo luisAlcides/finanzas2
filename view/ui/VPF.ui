@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Valor Presente</string>
+   <string>Valor Presente en una serie de flujos de caja</string>
   </property>
   <property name="styleSheet">
    <string notr="true">font: 16pt &quot;Segoe UI&quot;;
@@ -37,7 +37,7 @@ width: 70%;</string>
        <string notr="true">font: 700 italic 18pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
-       <string>Valor Presente</string>
+       <string>Valor Presente en una serie de flujos de caja</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -47,7 +47,7 @@ width: 70%;</string>
     <item>
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>VF: Valor futuro</string>
+       <string>Ft: Flujo de caja en el periodo t</string>
       </property>
      </widget>
     </item>
@@ -76,9 +76,19 @@ width: 70%;</string>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="txt_vf">
+     <widget class="QLabel" name="label_4">
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>En el campo Ft ingresar los valores separados por una coma</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_ft">
       <property name="placeholderText">
-       <string>VF</string>
+       <string>Ft</string>
       </property>
      </widget>
     </item>
@@ -86,13 +96,6 @@ width: 70%;</string>
      <widget class="QLineEdit" name="txt_i">
       <property name="placeholderText">
        <string>i</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="txt_n">
-      <property name="placeholderText">
-       <string>n</string>
       </property>
      </widget>
     </item>

@@ -43,8 +43,8 @@ class Varianza():
         xi = [float(i) for i in xi_con_coma]
         media = np.mean(xi)
         xi_menos_media = [np.power((i - media), 2) for i in xi]
-        var_muestra = np.var(xi, ddof=0)[0][1]
-        var_poblacion = np.var(xi, ddof=1)[0][1]
+        var_muestra = np.var(xi, ddof=0)
+        var_poblacion = np.var(xi, ddof=1)
 
         resultado = [[var_muestra, "Var", "Varianza Muestra", False, False, digito_select],
                      [var_poblacion, "Var", "Varianza Población", False, False, digito_select]]

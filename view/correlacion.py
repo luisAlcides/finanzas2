@@ -1,4 +1,6 @@
 import math
+import os
+
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.metrics import r2_score
@@ -14,10 +16,12 @@ from utils.util import mostrar_resultado, generar_pdf_dialogo, message
 from utils.validation import validate_array, validate_fields
 
 
+ruta_ui = os.path.join(os.path.dirname(__file__), 'ui/correlacion.ui')
+
 class Correlacion(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.ui = uic.loadUi('view/ui/correlacion.ui', self)
+        self.ui = uic.loadUi(ruta_ui, self)
         self.showMaximized()
         self.se_calculo = False
         self.datos_tabla_pdf = []

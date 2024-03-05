@@ -1,12 +1,16 @@
+import os
+
 from PyQt6 import uic
 
 from utils.util import mostrar_resultado, mostrar_resultado_tablas, generar_pdf_dialogo, message
 from utils.validation import validate_fields
 
+ruta_ui = os.path.join(os.path.dirname(__file__), 'ui/rendimientoEsperadoMultiple.ui')
+
 
 class RendimientoEsperadoMultiple:
     def __init__(self):
-        self.ui = uic.loadUi('view/ui/rendimientoEsperadoMultiple.ui')
+        self.ui = uic.loadUi(ruta_ui)
         self.ui.showMaximized()
         self.datos_tabla_pdf = []
         self.other_tabla_pdf = []

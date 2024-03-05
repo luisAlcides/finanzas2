@@ -1,11 +1,15 @@
+import os
+
 from PyQt6 import uic
 from utils.util import mostrar_resultado, generar_pdf_dialogo, message
 from utils.validation import validate_fields
 
+ruta_ui = os.path.join(os.path.dirname(__file__), 'ui/securityMarketLine.ui')
+
 
 class SecurityMarketLine():
     def __init__(self):
-        self.ui = uic.loadUi('view/ui/securityMarketLine.ui')
+        self.ui = uic.loadUi(ruta_ui)
         self.ui.showMaximized()
         self.se_calculo = False
         self.datos_tabla_pdf = []

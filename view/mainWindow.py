@@ -1,3 +1,5 @@
+import os
+
 from PyQt6 import uic
 
 from view.TIR import TIR
@@ -24,9 +26,10 @@ from view.securityMarketLine import SecurityMarketLine
 from view.varianza import Varianza
 
 
+ruta_ui = os.path.join(os.path.dirname(__file__), 'ui/mainWindow.ui')
 class MainWindow():
     def __init__(self):
-        self.ui = uic.loadUi('view/ui/mainWindow.ui')
+        self.ui = uic.loadUi(ruta_ui)
         self.ui.showMaximized()
 
         self.ui.qa_financiamiento_con_deuda.triggered.connect(self.openFinanciamientoConDeuda)

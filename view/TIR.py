@@ -1,3 +1,5 @@
+import os
+
 from PyQt6 import uic
 
 from utils.util import mostrar_resultado, generar_pdf_dialogo, message
@@ -6,9 +8,12 @@ from utils.validation import validate_fields
 import numpy_financial as npf
 
 
+ruta_ui = os.path.join(os.path.dirname(__file__), 'ui/TIR.ui')
+
+
 class TIR:
     def __init__(self):
-        self.ui = uic.loadUi('view/ui/TIR.ui')
+        self.ui = uic.loadUi(ruta_ui)
         self.ui.showMaximized()
         self.datos_tabla_pdf = []
         self.se_calculo = False

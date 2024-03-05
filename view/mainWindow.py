@@ -6,6 +6,7 @@ from view.VF import VF
 from view.VP import VP
 from view.VPF import VPF
 from view.VPN import VPN
+from view.acercaDe import AcercaDe
 from view.capitalMarketLine import CapitalMarketLine
 from view.correlacion import Correlacion
 from view.financiamientoAccionesPreferentes import FinanciamientoAccionesPreferentes
@@ -13,6 +14,7 @@ from view.CAMP import CAMP
 from view.covarianza import Covarianza
 from view.desviacionEstandar import DesviacionEstandar
 from view.financiamientoConDeuda import FinanciamientoConDeuda
+from view.informacion import Informacion
 from view.modeloCrecimientoConstanteDividendo import ModeloCrecimientoConstanteDividendo
 from view.precioAccionHoy import PrecioAccionHoy
 from view.rendimientoEsperado import RendimientoEsperado
@@ -48,6 +50,8 @@ class MainWindow():
         self.ui.qa_VF.triggered.connect(self.openVF)
         self.ui.qa_TIR.triggered.connect(self.openTIR)
         self.ui.qa_TMAR.triggered.connect(self.openTMAR)
+        self.ui.qa_informacion.triggered.connect(self.openInformacion)
+        self.ui.qa_acerca.triggered.connect(self.openAcercaDe)
 
     def openFinanciamientoConDeuda(self):
         self.financiamiento_con_deuda = FinanciamientoConDeuda()
@@ -129,3 +133,11 @@ class MainWindow():
     def openTMAR(self):
         self.tmar = TMAR()
         return self.tmar
+
+    def openInformacion(self):
+        self.informacion = Informacion()
+        return self.informacion
+
+    def openAcercaDe(self):
+        self.acerca_de = AcercaDe()
+        return self.acerca_de

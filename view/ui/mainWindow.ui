@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Finanzas 2</string>
+   <string>FinanZapp</string>
   </property>
   <widget class="QWidget" name="centralwidget"/>
   <widget class="QMenuBar" name="menubar">
@@ -63,10 +63,19 @@
     <addaction name="qa_varianza"/>
     <addaction name="qa_covarianza"/>
    </widget>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="qa_informacion"/>
+    <addaction name="qa_acerca"/>
+   </widget>
    <addaction name="menuArchivo"/>
    <addaction name="menuCreditos"/>
    <addaction name="menuRendimientos"/>
    <addaction name="menuEstadistica"/>
+   <addaction name="menuAyuda"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionDesarrolladores">
@@ -211,6 +220,16 @@
   <action name="qa_TMAR">
    <property name="text">
     <string>TMAR</string>
+   </property>
+  </action>
+  <action name="qa_informacion">
+   <property name="text">
+    <string>Información</string>
+   </property>
+  </action>
+  <action name="qa_acerca">
+   <property name="text">
+    <string>Acerca</string>
    </property>
   </action>
  </widget>
